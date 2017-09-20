@@ -1,1 +1,1 @@
-Moje repozytorium do pracy na lekcjach informatyki
+Moje repozytorium do pracy na lekcjach informatyki i nie tylko
