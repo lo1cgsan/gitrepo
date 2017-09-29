@@ -1,0 +1,7 @@
+git pull  – pobiera zmiany z repo zdalnego i wgrywa do lokalnego
+
+zmiany, nowe
+
+git add . – dodaje wszystkie zmiany do repo
+git commit -m "komentarz" – tworzy "zdjęcie"
+git push – wysyła zdjęcie do repo zdalnego
