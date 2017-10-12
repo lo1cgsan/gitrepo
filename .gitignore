@@ -3,3 +3,6 @@
 *.exe
 *.lck
 .~*
+
+__pycache__/
+*.py[cod]
