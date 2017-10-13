@@ -29,7 +29,7 @@ def main(args):
     cur.executemany('INSERT INTO dzial VALUES (?, ?, ?)', dzial)
     cur.executemany('INSERT INTO pracownicy (id, nazwisko, imie, stanowisko, data_zatr, placa, id_dzial) VALUES (?, ?, ?, ?, ?, ?, ?)', pracownicy)
     
-    con.commit()  # zatwierdzenie operacji na bazie
+    con.commit ()  # zatwierdzenie operacji na bazie
     
     return 0
 

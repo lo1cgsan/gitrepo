@@ -27,6 +27,7 @@ def wyczysc_dane(dane, pole):
         
     return dane
 
+
 def main(args):
     premia = dane_z_pliku('premia.txt')
     premia = wyczysc_dane(premia, 1)
