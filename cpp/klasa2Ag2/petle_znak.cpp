@@ -10,15 +10,29 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    char zn='t';
+    char zn=' '; // deklaracja
+    cout << "Podaj znak: ";
+    cin >> zn;
     
-    
-    while () {
-        cout << "Podaj miesiąc (1-12): ";
-        cin >> m;
+    while (zn == 't' || zn == 'T' || zn == 'n' || zn == 'N') {
+        cout << "Podaj znak: ";
+        cin >> zn;
+        //~if (zn == 't' || zn == 'T' || zn == 'n' || zn == 'N')
+            //~cout << zn << endl;
+        //~else
+            //~break;
+        //~switch (zn) {
+            //~case 't':
+            //~case 'T':
+            //~case 'n':
+            //~case 'N':
+                //~cout << "Poprawny ";
+            //~break;
+            //~default:
+                //~cout << "Inny znak ";
+                //~break;
+        //~}
     };
-
-
     
     return 0;
 }
