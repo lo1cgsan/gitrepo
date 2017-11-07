@@ -27,12 +27,15 @@ def main(args):
 
     # pobieranie typów użytkownika
     typy = set()  # pusty zbiór
-    for i in random(ileliczb):
+    # for i in range(ileliczb):
+    ile = 0
+    while ile < ileliczb:
         typ = input('Podaj typ: ')
-        typy.add(typ)
+        if typ not in typy:
+            typy.add(typ)
+            ile += 1
 
     print(typy)
-
 
     return 0
 
