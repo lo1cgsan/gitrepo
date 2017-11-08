@@ -170,3 +170,45 @@ Selektory atrybutów mają precyzję: 0,0,1,0
   <li>Punkt E</li>
 </ol>
 ```
+# Selektory elementów siostrzanych
+
+Wybór elementu występującego bezpośrednio za innym:
+
+```
+h2 {margin-bottom: 0;}
+h2 + p {margin-top: 0;}
+```
+
+```
+<h2>Nagłówek 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<h2>Nagłówek 3</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+```
+
+Wybór elementu występującego za elementem, ale nie bezpośrednio:
+
+* `h1 ~ ul {list-style-type: lower-alpha;}`
+
+```
+<body>
+  <ul><li>El 1<li></ul>
+  <h1>Nagłówek</h1>
+  <p>Akapit</p>
+  <ul><li>El 1<li></ul>
+  <ul><li>El 1<li></ul>
+  <ul><li>El 1<li></ul>
+  <h2>Nagłówek</h2>
+  <p>Akapit</p>
+  <ul><li>El 1<li></ul>
+</body>
+```
+
+# Pseudoelementy
+
+* `li:before {content: "Pkt: "; border-bottom: 1px solid gray;}`
+* `li:before {content: "\BB ";}`
+* `a[href]:after {content: " [" attr[href] "]"; font-size: smaller;}`
+
+Zob. technika stopniowego ulepszania (ang. *progressive enhancement*),
+m. in w stylach druku: http://alistapart.com/articles/goingtoprint.
