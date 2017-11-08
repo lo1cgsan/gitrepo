@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     char imie[10]; // deklaracja zmiennej tablicowej
     int wiek;
     wiek = 0; //inicjacja zmiennej
-    
+
     cout << "Witaj w C++!" << endl;
     cout << "Podaj imię: ";
     // cin >> imie;
@@ -23,7 +23,6 @@ int main(int argc, char **argv)
     cout << "Ile masz lat? ";
     cin >> wiek;
     cout << "Urodziłeś się w roku " << 2017 - wiek << endl;
-    
+
     return 0;
 }
-
