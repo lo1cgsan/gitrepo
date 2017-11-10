@@ -28,7 +28,7 @@ def main(args):
         typy.add(typ)
 
     print(typy)
-
+-
     return 0
 
 
