@@ -8,9 +8,14 @@
     <meta charset="utf-8" />
     <title>Podstawy HTML</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            font-size: 14pt;
+        }
+    </style>
 </head>
 
-<body>
+<body style="font-size: 16pt;">
     <div id="menu">
         <a class="menu" href="index.html">Strona główna</a>
         <a class="menu" href="listy.html">Listy</a>
@@ -18,10 +23,14 @@
         <a class="menu" href="specjalne/klasa1a.html">Klasa 1A</a>
     </div>
 
+    <div id="header" class="header">
+      <img style="border-color: lime;" src="imgs/header.png" alt="Nagłówek strony" width="100%">
+    </div>
+
     <div id="tresc">
         <h1>Nagłówek 1</h1>
         <h2>Ulubione obrazki</h2>
-        <div>
+        <div class="header">
             <img src="https://www.medianauka.pl/biologia/grafika/ssaki/big/tamandua.jpg">
             <a href="https://www.medianauka.pl/biologia/grafika/ssaki/big/tamandua.jpg">Mrówkojad</a>
         </div>
