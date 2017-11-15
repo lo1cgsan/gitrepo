@@ -1,4 +1,16 @@
-# Precyzja selektorów
+# Selektory CSS
+
+## Pseudoklasy
+
+* `:link`, `:visited`, `:hover`, `:active` – łącze nieodwiedzone, odwiedzone, nad którym jest kursor, zaznaczone kursorem (klikane);
+* `:focus`, `:first-child` – element z fokusem, pierwsze dziecko;
+* `:target`, `:nth-child()`, `:last-child`, `:checked` – pseudoklasy wprowadzone w CSS 3
+
+## Pseudoelementy
+
+* `::first-line`, `::first-letter`, `::before`, `::after` – pierwsza linia, pierwsza litera, przed i po elemencie.
+
+## Precyzja selektorów
 
 * każdy selektor elementu wnosi precyzję 0,0,0,1
 * każda klasa, pseudoklasa, selektor atrybutu mają precyzję 0,0,1,0
