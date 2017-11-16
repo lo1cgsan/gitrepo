@@ -15,18 +15,18 @@ class BaseModel(Model):
 
 
 class Premia(BaseModel):
-    id = CharField(primary_key = True)
+    id = CharField(primary_key=True)
     premia = DecimalField()
-    
+
 
 class Dzial(BaseModel):
-    id = IntegerField(primary_key = True)
+    id = IntegerField(primary_key=True)
     nazwa = CharField()
     siedziba = CharField()
 
 
 class Pracownik(BaseModel):
-    id = CharField(primary_key = True)
+    id = CharField(primary_key=True)
     nazwisko = CharField()
     imie = CharField()
     stanowisko = ForeignKeyField(Premia)
@@ -34,9 +34,10 @@ class Pracownik(BaseModel):
     placa = DecimalField(decimal_places=2)
     id_dzial = ForeignKeyField(Dzial)
     premia = DecimalField(decimal_places=2, default=0)
-    
+
+
 baza_plik.connect()  # połączenie z bazą
-#baza_plik.create_tables([Premia, Dzial, Pracownik], True)
+baza_plik.create_tables([Premia, Dzial, Pracownik], True)
 
 #obiekt = Premia(id='Kierowca', premia=0.2)  # utworzenie instancji klasy
 #obiekt.save()
@@ -79,9 +80,11 @@ with baza_plik.atomic():
 
 baza_plik.commit()  # zatwierdzenie operacji
 
+
 def main(args):
-    
+
     return 0
+
 
 if __name__ == '__main__':
     import sys
