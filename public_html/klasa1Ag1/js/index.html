@@ -1,0 +1,12 @@
+<label for="liczba1">Liczba 1</label>
+<input type="text" name="liczba1" id="liczba1">
+<br>
+<label for="liczba2">Liczba 2</label>
+<input type="text" name="liczba2" id="liczba2">
+<button onclick="oblicz();">Oblicz</button>
+
+function oblicz(){
+  var liczba1=document.getElementById("liczba1").value;
+  var liczba2=document.getElementById("liczba2").value;
+  alert("Suma: "+ (liczba1+liczba2));
+}

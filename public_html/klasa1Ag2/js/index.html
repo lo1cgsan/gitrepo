@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>bez nazwy</title>
+<meta name="generator" content="Geany 1.29" />
+<style>
+    h1 {background-color: green;}
+</style>
+</head>
+
+<body>
+
+<h1>Witaj na kursie!</h1>
+<p>Zaczniemy od pól tekstowych:</p>
+<label for="liczba1">Liczba 1: </label>
+<input type="text" id="liczba1">
+<label for="liczba2">Liczba 2: </label>
+<input type="text" id="liczba2">
+<button onclick="dodaj();">Podziel</button>
+
+<script>
+    function dodaj(){
+  var liczba1=document.getElementById("liczba1").value;
+  var liczba2=document.getElementById("liczba2").value;
+  if (parseInt(liczba2) == 0 ) {
+    alert("Nie wolno dzielić przez 0!");
+    liczba2 = 1;
+  }
+  alert("Iloraz: "+ (parseInt(liczba1)/parseInt(liczba2)));
+}
+</script>
+</body>
+
+</html>
