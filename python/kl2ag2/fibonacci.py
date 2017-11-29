@@ -11,20 +11,37 @@ def fib_iter(n):
     """
     a, b = (0, 1)
     if n == 0:
-        print a
+        print(a)
         return a
-    elif n == 1:
-        print b
-        return b
+    # elif n == 1:
+    #     print(b)
+    #     return b
 
-    for i in range(1, n):
-        a = b
-        b = a + b
+    print(a)
+    for i in range(2, n):
+        # tmp = b
+        # b = a + b
+        # a = tmp
+        a, b = b, a + b
+        print(a, " Wyraz ", i, ": ", b, "Iloraz: ", b / a)
+
+    return b
+
+
+def fib_iter2(n):
+    a, b = (0, 1)
+
+    print(a)
+    while n > 0:
+        a, b = b, a + b
+        print(a, " ", b, "Iloraz: ", b / a)
+        n = n - 1
 
     return b
 
 
 def main(args):
+    fib_iter2(10)
     return 0
 
 
