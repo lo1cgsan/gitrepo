@@ -1,0 +1,4 @@
+cd ~
+virtualenv -p python3 pve3
+source ~/pve3/bin/activate
+pip install peewee flask-wtf
