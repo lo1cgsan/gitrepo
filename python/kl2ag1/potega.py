@@ -14,6 +14,14 @@ def potega_it(podst, wykladnik):
     return wynik
 
 
+# potega_rek(a, 0) = 1 dla a różnego od 0
+# potega_rek(a, n) = potega_rek(a, n-1) * a dla n = N+
+def potega_rek(a, n):
+    if n == 0:
+        return 1
+    return potega_rek(a, n - 1) * a
+
+
 def main(args):
     """Funkcja główna"""
     a = int(input('Podaj liczbę naturalną: '))
@@ -23,8 +31,8 @@ def main(args):
     assert potega_it(a, 0) == 1
     assert potega_it(a, 1) == a
     assert potega_it(2, 2) == 4
-    assert potega_it(3, 2) == 9
-    print('Potega dla {:d} do {:d}: {:d}'.format(a, n, potega_it(a, n)))
+    assert potega_rek(3, 2) == 9
+    print('Potega dla {:d} do {:d}: {:d}'.format(a, n, potega_rek(a, n)))
     return 0
 
 

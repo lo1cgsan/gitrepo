@@ -4,7 +4,8 @@
 #  silnia.py
 #  n! = 1 dla n={0, 1}
 #  n! = 1 * ... * n dla N+ - {1}
-
+# 5! = 4! * 5
+# n! = (n-1)! * n
 
 def silnia_it(n):
     wynik = 1
