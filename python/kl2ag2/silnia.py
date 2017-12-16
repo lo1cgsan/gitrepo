@@ -3,6 +3,15 @@
 # n! = 1 dla {0, 1}
 # n! = 1 * 2 * ... * n dla N+ - {0, 1}
 
+# n! = (n-1)! * n
+# 4! = 3! * 4
+
+
+def silnia_rek(n):
+    if n < 2:
+        return 1
+    return silnia_rek(n - 1) * n
+
 
 def silnia_it(n):
     """Funkcja oblicza iteracyjnie
@@ -20,7 +29,8 @@ def main(args):
     assert silnia_it(0) == 1
     assert silnia_it(1) == 1
     assert silnia_it(7) == 5040
-    # print("Potęga: ", potega_it(a, n))
+    assert silnia_rek(7) == 5040
+    print("Silnia: ", silnia_rek(a))
 
     return 0
 

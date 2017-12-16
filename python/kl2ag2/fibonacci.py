@@ -40,6 +40,12 @@ def fib_iter2(n):
     return b
 
 
+def fib_rek(n):
+    # F(1) = 1
+    # F(n) = F(n-2) + F(n-1) dla n > 1
+    pass
+
+
 def main(args):
     fib_iter2(10)
     return 0
