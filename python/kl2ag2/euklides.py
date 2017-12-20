@@ -17,6 +17,11 @@ def euklides2(a, b):
         b = b - a
     return b
 
+def euklides_rek(a, b):
+    if b == 0:
+        return a
+    return euklides_rek(b, a % b)
+
 
 def main(args):
     a = int(input("Podaj liczbę: "))
