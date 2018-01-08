@@ -47,6 +47,9 @@ void sort_wyb(int t[], int n) {
 
 int main(int argc, char **argv)
 {
+    //int t[] = {3, 4, 1, 8, 0}
+    //t = [3, 4, 1, 8, 0]
+    
 	const int ile = 10;
     int tab[ile];
     wypelnij(tab, ile, 20);
