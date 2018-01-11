@@ -1,8 +1,8 @@
 /*
  * struktury.cpp
- * 
+ *
  * Copyright 2018  <>
- * 
+ *
  */
 
 
@@ -56,6 +56,7 @@ void zapiszDane(osoba t[], int ile) {
             cout << t[i].imie << "," << t[i].nazwisko << "," << t[i].wiek << endl;
             plik << t[i].imie << "," << t[i].nazwisko << "," << t[i].wiek << endl;
         }
+        plik.close()
     }
 }
 
@@ -63,7 +64,7 @@ int czytajDane(osoba t[]) {
     ifstream plik("osoby.txt");
     string linia;
     int i = 0;
-    
+
     if (plik.is_open()) {
         while(getline(plik, linia)) {
             cout << linia << endl;
@@ -72,7 +73,7 @@ int czytajDane(osoba t[]) {
     } else {
         cout << "Błąd otwarcia pliku!";
     }
-    
+
     return i;
 }
 
