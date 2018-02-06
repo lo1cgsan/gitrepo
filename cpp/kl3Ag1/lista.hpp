@@ -16,6 +16,7 @@ class Lista {
        void Dodaj(int);
        void Wyswietl();
        bool Usun();
+       void Wstaw(int, int);
 };
 
 #endif
