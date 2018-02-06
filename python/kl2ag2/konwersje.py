@@ -31,8 +31,10 @@ def other2dec(liczba, podstawa):
     liczba10 = 0
     potega = len(liczba) - 1
     for cyfra in liczba:
-        # pass
-        liczba10 += int(cyfra) * (podstawa ** potega)  # 1 * 7 ** 2
+        if not cyfra.isdigit():
+            liczba10 += (ord(cyfra.upper()) - 55)  * (podstawa ** potega)
+        else:
+            liczba10 += int(cyfra) * (podstawa ** potega)  # 1 * 7 ** 2
         potega -= 1
 
     return liczba10
