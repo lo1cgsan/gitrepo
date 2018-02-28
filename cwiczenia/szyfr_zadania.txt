@@ -1,0 +1,11 @@
+VCBIU FHCDUD MHVW SURVWB
+SZYFR CEZARA JEST PROSTY
+
+Zadanie 2/129
+
+Zaszyfruj swoje dane osobowe, tj.:
+imię, nazwisko, data urodzenia, miejsce urodzenia
+przy użyciu 3 poznanych szyfrów,
+tj. szyfru Cezara, szyfru podstawieniowego oraz szyfru Vigenere'a.
+
+W odpowiedzi podaj szyfrogramy i klucze.
