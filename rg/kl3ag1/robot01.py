@@ -7,25 +7,45 @@ import rg
 class Robot:
 
     def act(self, game):
+
+        # typy pól: 'spawn', 'normal', 'obstacle', 'invalid'
+        # rg.loc_types() – zwraca typ pola
+        def czy_wejscie(poz):
+            if 'spawn' in rg.loc_types(poz):
+                return True
+            return False
+        # return ['guard']
+        # return ['suicide']
+        # return ['move', (4, 5)]
+        # return ['attack', (5, 4)]
         # ilu_wrogow = 0
-        lista_wrogow = []
+
+        print(game.robots)
+
+        lista_wrogow_obok = []
 
         for poz, robot in game.robots.iteritems():
-            if robot.player_id != self.player_id:
+            if robot.player_id != self.player_id:  # rozpoznanie wroga
+                # print(rg.dist(poz, self.location))
                 if rg.dist(poz, self.location) <= 1:
-                    lista_wrogow.append(poz)
+                    lista_wrogow_obok.append(poz)
                     # ilu_wrogow += 1
                     # return ['attack', poz]
 
-        if len(lista_wrogow) > 2:
-            return['suicide']
-        elif len(lista_wrogow):
-            return['attack', lista_wrogow[0]]
+        print(lista_wrogow_obok)
 
-        print(game.robots)
+        # rg.dist() – odległość między dwoma lokalizacjami
+        # rg.toward() – najkrótsza droga pomiędzy dwoma lokalizacjami
+
+        if len(lista_wrogow_obok) > 2 and self.hp < 27:
+            return['suicide']
+        elif len(lista_wrogow_obok):
+            return['attack', lista_wrogow_obok[0]]
 
         if self.location == rg.CENTER_POINT:
             return ['guard']
 
         # idź do środka planszy, ruch domyślny
-        return ['move', rg.toward(self.location, rg.CENTER_POINT)]
+        if czy_wejscie(self.location):
+            return ['move', rg.toward(self.location, rg.CENTER_POINT)]
+
