@@ -1,9 +1,11 @@
 szerokosc = 640;
 wysokosc = 480;
 
-ileKw = prompt("Podaj ilość losowanych punktów:", 100);
+// ileKw = prompt("Podaj ilość losowanych punktów:", 10000);
+ileKw = 10000;
 ileKw = parseInt(ileKw);
-r = prompt("Podaj promień:", 100);
+// r = prompt("Podaj promień:", 100);
+r = 100;
 ileKo = 0;
 
 function getRnd(min, max) {
@@ -14,8 +16,8 @@ lx = [];
 ly = [];
 
 for (i = 0; i < ileKw; i++) {
-    x = Math.floor(getRnd(r, -r));
-    y = Math.floor(getRnd(r, -r));
+    x = Math.floor(getRnd(-r, r));
+    y = Math.floor(getRnd(-r, r));
     // console.log(x);
     // console.log(y);
     lx[i] = x;
@@ -25,19 +27,30 @@ for (i = 0; i < ileKw; i++) {
     }
 }
 
-console.log(lx);
+// console.log(lx);
 pi = 4 * ileKo / ileKw;
 alert("Przybliżona wartość Pi: " + pi);
 
 
 function setup() {
   createCanvas(szerokosc, wysokosc);
-  background('#00ff00');
+  stroke('#666');
+  background('#fff');
+  ellipse(szerokosc / 2, wysokosc / 2, 2 * r, 2 * r);
+  line(szerokosc / 2, 0, szerokosc / 2, wysokosc);  // oś y
+  line(0, wysokosc / 2, szerokosc, wysokosc / 2);  // oś x
 }
 
+x_offset = szerokosc / 2;
+y_offset = wysokosc / 2;
+
 function draw() {
-	stroke('#000')
-  ellipse(szerokosc / 2, wysokosc / 2, 2 * r, 2 * r);
-  line(szerokosc / 2, 0, szerokosc / 2, wysokosc);
-  line(0, wysokosc / 2, szerokosc, wysokosc / 2);
+  for (i = 0; i < ileKw; i++) {
+    if (lx[i]*lx[i] + ly[i]*ly[i] <= r*r) {
+      stroke('#f00');
+    } else {
+      stroke('#000');
+    }
+    point(lx[i] + x_offset, ly[i] + y_offset);
+  }
 }
