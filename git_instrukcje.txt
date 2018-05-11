@@ -7,3 +7,13 @@ zmiany, nowe
 4) git push – wysyła zdjęcie do repo zdalnego
 
 wprowadzam zmiane
+
+C:\Windows\System32\sqlite3.exe
+
+cmd
+powershell
+sqlite3.exe szkola.db < szkola.sql
+sqlite3.exe szkola.db
+.tables
+.schema
+.quit
