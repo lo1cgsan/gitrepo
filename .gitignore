@@ -10,3 +10,6 @@ venv
 pve
 
 .DS_Store
+
+# katalog konfiguracyjny WebStorma
+.idea
