@@ -4,5 +4,5 @@ CREATE TABLE filmy (
     name TEXT NOT NULL,
     genre TEXT DEFAULT '',
     year INTEGER,
-    rating DECIMAL
+    rating DECIMAL DEFAULT ''
 );
