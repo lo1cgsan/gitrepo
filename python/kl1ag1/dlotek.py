@@ -12,20 +12,23 @@ def main(args):
     # losowanie liczb
 
     liczby = []  # lista wylosowanych liczb
-    for i in range(ileliczb):
+    i = 0
+    # for i in range(ileliczb):
+    while i < ileliczb:
         liczba = random.randint(1, maksliczba)  # losowanie liczby <1;10>
         if liczby.count(liczba) == 0:  # sprawdzenie czy wartość jest w liście
             liczby.append(liczba)
+            i += 1  # powiększ i o 1
     print(liczby)
 
-        # odp = input("Podaj liczbę od 1 do 10: ")
-        # print("Podałeś:", odp)
-
-        # if liczba == int(odp):  # porównanie odpowiedzi z wylosowaną liczbą
-        #     print("Zgadłeś!")
-        #     break  # przerwanie działania pętli
-        # else:
-        #     print("Spróbuj jeszcze raz!")
+    typy = set()  # deklaracja pustego zbioru na typy użytkownika
+    i = 0
+    while i < ileliczb:
+        typ = input("Podaj liczbę {}: ".format(i + 1))
+        if typ not in typy:  # jeżeli podanego typu nie ma w zbiorze
+            typy.add(typ)
+            i += 1
+    print(typy)
 
     return 0
 
