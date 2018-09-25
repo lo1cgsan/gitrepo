@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+#
+# Implementacja algorytmu Euklidesa
 
 def nwd_v1(a, b):
     """Wersja klasyczna"""
@@ -26,7 +27,7 @@ def main(args):
     assert nwd_v2(5, 10) == 5
     assert nwd_v2(3, 9) == 3
     assert nwd_v2(33, 11) == 11
-    print("NWW({:d}, {:d}) = {:d}".format(a, b, nwd_v2(a, b)))
+    print("NWD({:d}, {:d}) = {:d}".format(a, b, nwd_v2(a, b)))
     return 0
 
 
