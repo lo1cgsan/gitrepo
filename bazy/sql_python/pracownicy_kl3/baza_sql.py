@@ -12,7 +12,7 @@ def main(args):
     cur = con.cursor()  # utworzenie kursora
     
     # utworzenie tabel w bazie danych
-    with open('pracownicy_z1.sql', 'r') as plik:
+    with open('pracownicy.sql', 'r') as plik:
         skrypt = plik.read()
         cur.executescript(skrypt)
     
@@ -24,10 +24,9 @@ def main(args):
     pracownicy = dane_z_pliku('pracownicy.txt')
     pracownicy = wyczysc_dane(pracownicy, 5)
     
-    print(pracownicy[0])
     cur.executemany('INSERT INTO premia VALUES (?, ?)', premia)
     cur.executemany('INSERT INTO dzial VALUES (?, ?, ?)', dzial)
-    cur.executemany('INSERT INTO pracownicy (id, nazwisko, imie, stanowisko, data_zatr, placa, id_dzial) VALUES (?, ?, ?, ?, ?, ?, ?)', pracownicy)
+    cur.executemany('INSERT INTO pracownicy (id, nazwisko, imie, stanowisko, dataz, placa, dzial) VALUES (?, ?, ?, ?, ?, ?, ?)', pracownicy)
     
     con.commit ()  # zatwierdzenie operacji na bazie
     
