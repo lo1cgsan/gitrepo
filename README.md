@@ -1,1 +1,1 @@
-Repozytorium do pracy na lekcjach informatyki i nie tylko.
+Repozytorium do pracy na lekcjach informatyki.
